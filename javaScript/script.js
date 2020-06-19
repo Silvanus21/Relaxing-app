@@ -1,6 +1,6 @@
-const text = document.querySelector(".relaxText");
+const text = document.querySelector("#relaxText");
 
-const container = document.querySelector(".container");
+const container = document.querySelector("#container");
 const totalTime = 7500;
 const holdTime = 1500;
 const breatheTime = 3000;

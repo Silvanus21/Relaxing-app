@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  /* background: linear-gradient(#0f2027, #203a43, #2c5364); */
+  background : url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?cs=srgb&dl=blue-blur-color-dark-932638.jpg&fm=jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+  font-family: "open sans", sans-serif;
   overflow: hidden;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #dae1e7;
-  font-family: cursive;
+
 }
 
 .container {
@@ -27,12 +34,12 @@ body {
 
 .bigger-circle {
   background: conic-gradient(
-    #00909e 0%,
-    #00909e 40%,
-    #dae1e7 40%,
-    #dae1e7 60%,
-    #27496d 60%,
-    #27496d 100%
+    #55b7a4 0%,
+    #4ca493 40%,
+    #fff 40%,
+    #fff 60%,
+    #336d62 60%,
+    #2a5b52 100%
   );
   width: 216px;
   height: 216px;
@@ -44,7 +51,7 @@ body {
 }
 
 .circle {
-  background: radial-gradient(circle, #243b55 ,#141e30);
+  background-color: #010f1c; 
   height: 100%;
   width: 100%;
   position: absolute;
@@ -53,6 +60,15 @@ body {
   z-index: -1;
   border-radius: 50%;
 }
+
+.pointer-circle {
+  background-color: #dae1e7;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  display: block;
+}
+
 
 .pointer-container {
   position: absolute;
@@ -64,22 +80,6 @@ body {
   transform-origin: bottom center;
 }
 
-.pointer-circle {
-  background-color: #dae1e7;
-  border-radius: 50%;
-  height: 14px;
-  width: 14px;
-  display: block;
-}
-
-.container.grow {
-  animation: grow 3s linear forwards;
-}
-
-.container.shrink {
-  animation: shrink 3s linear forwards;
-}
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -89,18 +89,26 @@ body {
   }
 }
 
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
 @keyframes grow {
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(1.15);
+    transform: scale(1.2);
   }
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
 }
 
 @keyframes shrink {
   from {
-    transform: scale(1.15);
+    transform: scale(1.2);
   }
   to {
     transform: scale(1);
